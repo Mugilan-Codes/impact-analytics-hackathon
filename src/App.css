@@ -1,6 +1,7 @@
 html,
 body {
-  height: 100%;
+  margin: 0;
+  min-height: 100%;
   width: 100%;
 }
 
@@ -17,6 +18,7 @@ body {
   transition: 0.3s;
   border-radius: 5px;
   padding: 1rem;
+  background-color: aliceblue;
 }
 
 .card:hover {
@@ -34,16 +36,14 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 1rem;
   padding: 1rem;
-  /* display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; */
+}
+
+.grid-container > div {
+  flex: 1;
+  max-width: 100%;
 }
 
 .list-container {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  padding: 1rem; */
   display: flex;
   flex-wrap: wrap;
 }
@@ -52,6 +52,7 @@ img {
   padding: 2rem;
   margin: 1rem;
 }
+
 .button {
   border: none;
   color: white;
@@ -76,11 +77,39 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100vh;
+  background-color: aquamarine;
 }
 
 .search-bar {
   padding: 0.5rem;
   width: 40vw;
   border-radius: 25px;
+}
+
+.more-button {
+  padding: 0.5rem;
+  border: 3px solid gray;
+  border-radius: 5px;
+}
+
+.more-button > a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.more-button:hover {
+  background-color: yellow;
+}
+
+.go-back {
+  margin: 2rem;
+  border: 1px solid black;
+  padding: 1rem;
+  background: blanchedalmond;
+  border-radius: 5px;
+}
+
+.go-back > a {
+  text-decoration: none;
 }

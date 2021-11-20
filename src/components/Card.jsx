@@ -13,7 +13,9 @@ const Card = ({ id, imageUrl, name, status }) => {
         <p>Status: {status}</p>
       </div>
 
-      <Link to={`/${id}`}>More</Link>
+      <div className='more-button'>
+        <Link to={`/${id}`}>More</Link>
+      </div>
     </div>
   );
 };

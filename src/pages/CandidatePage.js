@@ -59,7 +59,9 @@ const CandidatePage = ({ candidates, setCandidates }) => {
         </div>
       </div>
 
-      <Link to='/'>Go Back</Link>
+      <div class='go-back'>
+        <Link to='/'>Go Back</Link>
+      </div>
     </div>
   );
 };

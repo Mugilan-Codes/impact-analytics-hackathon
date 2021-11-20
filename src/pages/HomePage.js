@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import Card from '../components/Card';
@@ -7,13 +7,14 @@ const HomePage = ({ candidates }) => {
   const [searchText, setSearchText] = useState('');
   const [filteredCandidates, setFilteredCandidates] = useState([]);
 
-  // TODO: Search Functionality
   const searchCandidates = (text) => {
     let query = text.toLowerCase();
-
+    if (query === '') {
+      setFilteredCandidates(candidates);
+    }
     let newCandidateList = [];
 
-    for (const c of filteredCandidates) {
+    for (const c of candidates) {
       let candidateName = c.name.toLowerCase();
 
       let filtered = candidateName.search(query);
@@ -30,6 +31,10 @@ const HomePage = ({ candidates }) => {
     setSearchText(e.target.value);
     searchCandidates(e.target.value);
   };
+
+  useEffect(() => {
+    setFilteredCandidates(candidates);
+  }, [candidates]);
 
   return (
     <div className='text-center'>

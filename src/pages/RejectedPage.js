@@ -23,7 +23,9 @@ const RejectedPage = ({ candidates }) => {
         ))}
       </div>
 
-      <Link to='/'>Go Back</Link>
+      <div className='go-back'>
+        <Link to='/'>Go Back</Link>
+      </div>
     </div>
   );
 };
