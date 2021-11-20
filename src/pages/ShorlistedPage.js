@@ -11,7 +11,7 @@ const ShorlistedPage = ({ candidates }) => {
     <div className='text-center'>
       <h1>Shortlisted Candidates</h1>
 
-      <div className='list-container'>
+      <div className='grid-container'>
         {shortlistedCandidates.map((candidate, idx) => (
           <Card
             imageUrl={candidate.Image}

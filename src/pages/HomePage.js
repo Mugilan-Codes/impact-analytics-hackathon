@@ -48,7 +48,7 @@ const HomePage = ({ candidates }) => {
         placeholder='Search Candidates...'
       />
 
-      <div>
+      <div className='view-buttons'>
         <Link to='/shortlist' className='button green'>
           Shortlisted Candidates
         </Link>
@@ -57,7 +57,7 @@ const HomePage = ({ candidates }) => {
         </Link>
       </div>
 
-      <div className='list-container'>
+      <div className='grid-container'>
         {filteredCandidates.map((candidate, idx) => (
           <Card
             imageUrl={candidate.Image}

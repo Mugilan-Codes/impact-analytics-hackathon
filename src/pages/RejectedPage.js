@@ -11,7 +11,7 @@ const RejectedPage = ({ candidates }) => {
     <div className='text-center'>
       <h1>Rejected Candidates</h1>
 
-      <div className='list-container'>
+      <div className='grid-container'>
         {rejectedCandidates.map((candidate, idx) => (
           <Card
             imageUrl={candidate.Image}
