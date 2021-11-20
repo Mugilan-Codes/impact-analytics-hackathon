@@ -5,7 +5,8 @@ import HomePage from './pages/HomePage';
 import CandidatePage from './pages/CandidatePage';
 import ShorlistedPage from './pages/ShorlistedPage';
 import RejectedPage from './pages/RejectedPage';
-import NotFoundPage from './pages/NotFoundPage';
+
+import { REJECT_PAGE, SHORTLIST_PAGE } from './constants/routes';
 
 import './App.css';
 
@@ -39,11 +40,11 @@ function App() {
       <Routes>
         <Route exact path='/' element={<HomePage candidates={candidates} />} />
         <Route
-          path='shortlist'
+          path={SHORTLIST_PAGE}
           element={<ShorlistedPage candidates={candidates} />}
         />
         <Route
-          path='rejects'
+          path={REJECT_PAGE}
           element={<RejectedPage candidates={candidates} />}
         />
         <Route
@@ -55,7 +56,6 @@ function App() {
             />
           }
         />
-        <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </Router>
   );

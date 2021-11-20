@@ -8,10 +8,12 @@ const CandidatePage = ({ candidates, setCandidates }) => {
 
   if (!candidate) {
     return (
-      <div>
+      <div className='center-card'>
         <h1>Candidate Not Found</h1>
 
-        <Link to='/'>Go To Home</Link>
+        <div class='go-back'>
+          <Link to='/'>Go To Home</Link>
+        </div>
       </div>
     );
   }

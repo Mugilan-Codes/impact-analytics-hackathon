@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import Card from '../components/Card';
+import { REJECT_PAGE, SHORTLIST_PAGE } from '../constants/routes';
 
 const HomePage = ({ candidates }) => {
   const [searchText, setSearchText] = useState('');
@@ -49,10 +50,10 @@ const HomePage = ({ candidates }) => {
       />
 
       <div className='view-buttons'>
-        <Link to='/shortlist' className='button green'>
+        <Link to={`/${SHORTLIST_PAGE}`} className='button green'>
           Shortlisted Candidates
         </Link>
-        <Link to='/rejects' className='button red'>
+        <Link to={`/${REJECT_PAGE}`} className='button red'>
           Rejected Candidates
         </Link>
       </div>
