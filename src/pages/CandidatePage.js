@@ -20,7 +20,7 @@ const CandidatePage = ({ candidates, setCandidates }) => {
     let msg;
     switch (choice) {
       case 's':
-        msg = 'Shorlisted';
+        msg = 'Shortlisted';
         break;
       case 'r':
         msg = 'Rejected';
@@ -41,21 +41,25 @@ const CandidatePage = ({ candidates, setCandidates }) => {
   };
 
   return (
-    <div className='card'>
-      <img src={candidate.Image} alt={candidate.name} />
+    <div className='center-card'>
+      <div className='card'>
+        <img src={candidate.Image} alt={candidate.name} />
 
-      <h1>{candidate.name}</h1>
+        <h1>{candidate.name}</h1>
 
-      <p>Current Status: {candidate.status}</p>
+        <p>Current Status: {candidate.status}</p>
 
-      <div>
-        <button className='button green' onClick={() => handleOnClick('s')}>
-          Shorlist
-        </button>
-        <button className='button red' onClick={() => handleOnClick('r')}>
-          Reject
-        </button>
+        <div>
+          <button className='button green' onClick={() => handleOnClick('s')}>
+            Shorlist
+          </button>
+          <button className='button red' onClick={() => handleOnClick('r')}>
+            Reject
+          </button>
+        </div>
       </div>
+
+      <Link to='/'>Go Back</Link>
     </div>
   );
 };
